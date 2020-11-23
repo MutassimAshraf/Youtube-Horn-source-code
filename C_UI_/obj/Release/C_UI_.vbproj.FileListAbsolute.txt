@@ -1,0 +1,14 @@
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\bin\Release\C_UI_.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\bin\Release\C_UI_.pdb
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\bin\Release\C_UI_.xml
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\obj\Release\C_UI_.Resources.resources
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\obj\Release\C_UI_.YutubeList_UI.resources
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\obj\Release\C_UI_.vbproj.GenerateResource.cache
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\obj\Release\C_UI_.vbproj.CoreCompileInputs.cache
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\obj\Release\C_UI_.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\obj\Release\C_UI_.xml
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\obj\Release\C_UI_.pdb
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\bin\Release\C_UI_.dll.config
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\bin\Release\Guna.UI.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\obj\Release\C_UI_.downlodVideo.resources
+C:\Users\mutassim ashraf\Desktop\Myplaylist\C_UI_\obj\Release\C_UI_.vbproj.CopyComplete

@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23D44368-6D18-4083-90E7-C439C3EFBD34}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Myplaylist.My.MyApplication</StartupObject>
+    <RootNamespace>Myplaylist</RootNamespace>
+    <AssemblyName>Youtube Horn</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Youtube Horn.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Youtube Horn.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>youtube_horn.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>Youtube Horn.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>Youtube Horn.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>Youtube Horn.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>Youtube Horn.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="gTrackBar">
+      <HintPath>..\..\gTrackBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI, Version=1.9.0.0, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleWifi">
+      <HintPath>..\..\SimpleWifi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="download_list.Designer.vb">
+      <DependentUpon>download_list.vb</DependentUpon>
+    </Compile>
+    <Compile Include="download_list.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="download_video.Designer.vb">
+      <DependentUpon>download_video.vb</DependentUpon>
+    </Compile>
+    <Compile Include="download_video.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loading_screen.Designer.vb">
+      <DependentUpon>loading_screen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loading_screen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="offlineList.Designer.vb">
+      <DependentUpon>offlineList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="offlineList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfflineVideoPlayer.Designer.vb">
+      <DependentUpon>OfflineVideoPlayer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OfflineVideoPlayer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="openVideo.Designer.vb">
+      <DependentUpon>openVideo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="openVideo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wifi_error.Designer.vb">
+      <DependentUpon>wifi_error.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wifi_error.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="download_list.resx">
+      <DependentUpon>download_list.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="download_video.resx">
+      <DependentUpon>download_video.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loading_screen.resx">
+      <DependentUpon>loading_screen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="offlineList.resx">
+      <DependentUpon>offlineList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfflineVideoPlayer.resx">
+      <DependentUpon>OfflineVideoPlayer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="openVideo.resx">
+      <DependentUpon>openVideo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wifi_error.resx">
+      <DependentUpon>wifi_error.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\add_file_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_s1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_w_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close2_w_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min_s_w_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min_s1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_s_w_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_NEXT2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_text2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music_list2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9a9c5d276af56c6a6947c480d1dcbb38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adele-skyfall-lyric-video.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artworks-000081163995-r8gvjt-t500x500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artworks-000158965855-miirzk-t500x500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artworks-000210531608-jr2tdk-t500x500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artworks-000309159933-fa2bjt-t500x500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B.o.B - Airplanes ft. .jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bat water_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mqdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OFFICIAL The Devil and The Huntsman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rag n Bone Man Human.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RagnBone Man_Wolves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remembrance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roots swingin hammers_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound of war.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the mountain museic image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winter%27s Song.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="music_list2.ico" />
+    <None Include="Resources\channels4_profile.jpg" />
+    <None Include="Resources\icons8_sort_down_20px.png" />
+    <None Include="Resources\2-21145_youtube-logo-transparent-png-pictures-transparent-background-youtube - Smart Object Group.png" />
+    <None Include="Resources\icons8_falcon_25px.png" />
+    <Content Include="youtube_horn.ico" />
+    <None Include="Resources\youtube_horn.png" />
+    <None Include="Resources\b13ad59867aa8ade2e9e2194afd75402.gif" />
+    <None Include="Resources\ai-loader-design-for-rokid-by-fantasy-large.gif" />
+    <None Include="Resources\tumblr_00f58b1a1f3cbe46daa05fccd72bffef_bfd6dce1_1280.gif" />
+    <None Include="Resources\guanxian.gif" />
+    <None Include="Resources\admin_d2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\C_UI_\C_UI_.vbproj">
+      <Project>{5D7A8BEA-119A-4E7B-A934-30B47C1448F8}</Project>
+      <Name>C_UI_</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

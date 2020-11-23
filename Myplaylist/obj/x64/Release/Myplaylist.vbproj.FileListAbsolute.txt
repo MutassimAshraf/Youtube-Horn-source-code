@@ -1,0 +1,47 @@
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Bunifu_UI_v1.5.3.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\C_UI_.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Gremlin.Net.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Guna.UI.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Nancy.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Polly.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\YoutubeExtractor.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\C_UI_.pdb
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\C_UI_.xml
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\C_UI_.dll.config
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Gremlin.Net.pdb
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Gremlin.Net.xml
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Nancy.xml
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Polly.pdb
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Polly.xml
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\YoutubeExtractor.xml
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.download_video.resources
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.Resources.resources
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.vbproj.GenerateResource.cache
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.vbproj.CoreCompileInputs.cache
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.vbproj.CopyComplete
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.vbprojAssemblyReference.cache
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Youtube Horn.exe.config
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Youtube Horn.exe
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Youtube Horn.pdb
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Youtube Horn.xml
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\AudioSwitcher.AudioApi.CoreAudio.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\AudioSwitcher.AudioApi.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\gTrackBar.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\SimpleWifi.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\Interop.WMPLib.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\bin\x64\Release\AxInterop.WMPLib.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Interop.WMPLib.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\AxInterop.WMPLib.dll
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.vbproj.ResolveComReference.cache
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.download_list.resources
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.YoutubeHorn.resources
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.loading_screen.resources
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.offlineList.resources
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.OfflineVideoPlayer.resources
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.openVideo.resources
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Myplaylist.wifi_error.resources
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Youtube Horn.exe
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Youtube Horn.xml
+C:\Users\mutassim ashraf\Desktop\Myplaylist\Myplaylist\obj\x64\Release\Youtube Horn.pdb

@@ -1,0 +1,1251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.WinForms.84.4.10\build\CefSharp.WinForms.props" Condition="Exists('..\packages\CefSharp.WinForms.84.4.10\build\CefSharp.WinForms.props')" />
+  <Import Project="..\packages\CefSharp.Common.84.4.10\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.84.4.10\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.84.4.1\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.84.4.1\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.84.4.1\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.84.4.1\build\cef.redist.x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C78F2D2-07A7-4469-8C54-9BADD302BEC5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>music_player_</RootNamespace>
+    <AssemblyName>music_player_</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>music_player_.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WMPLib.1.0.0\lib\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="gTrackBar">
+      <HintPath>..\..\gTrackBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WMPLib.1.0.0\lib\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="SimpleWifi">
+      <HintPath>..\..\SimpleWifi.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_.Designer.cs">
+      <DependentUpon>add_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="music_list_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="music_list_form.Designer.cs">
+      <DependentUpon>music_list_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="add_.resx">
+      <DependentUpon>add_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="music_list_form.resx">
+      <DependentUpon>music_list_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_l_s_w_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_l_s2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_r_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_r_s_w_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_r_s2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artworks-000081163995-r8gvjt-t500x500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artworks-000158965855-miirzk-t500x500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artworks-000210531608-jr2tdk-t500x500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artworks-000309159933-fa2bjt-t500x500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 199.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio_w_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B.o.B - Airplanes ft. .jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B.o.B_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_best.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_bett.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_bett_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_o.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bat water_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-background-png-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c__.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c2_w_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camila cabello_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cf03ju.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charg_s_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu_s_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\day.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_adjust_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_airplane_landing_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_airplane_take_off_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Audio_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bluetooth_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_calculator_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cell_tower_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checklist_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_chrome_25px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_chrome_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_chrome_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_circle_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_circled_notch_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_circled_right_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_circled_right_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_compress_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_compress_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_console_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_control_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_control_panel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_day_view_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_desktop_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_deviation_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_deviation_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_document_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_easy_listening_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_fast_forward_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_file_explorer_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_filled_circle_13px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_filled_circle_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_filled_circle_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_film_roll_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_folder_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_globe_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_globe_25px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_google_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_google_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_hibernate_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_hibernate_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_home_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_home_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_home_page_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_home_page_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_imac_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_image_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_list_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_maximize_button_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_maximize_button_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_microsoft_edge_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_microsoft_edge_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_microsoft_outlook_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Microsoft_Outlook_2019_48px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_microsoft_powerpoint_25px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Microsoft_PowerPoint_2019_48px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Microsoft_Word_2019_48px11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_movie_beginning_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_music_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_music_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_music_record_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_music_record_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_music_record_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_music_window_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_musical_notes_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_mute_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_next_page_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_note_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_note_25px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_note_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_office_365_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_partly_cloudy_day_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Pause_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pause_button_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Pause_Button_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_phonelink_ring_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_phonelink_ring_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_picture_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_picture_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pin_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_play_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Play_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_play_button_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_play_button_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_play_button_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_play_button_32px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_play_button_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_play_button_circled_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Play_Button_Circled_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_playlist_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_rainmeter_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_recharge_battery_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_repeat_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_restore_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_restore_down_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_restore_down_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_rewind_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_run_command_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_32px_2_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_settings_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shuffle_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shutdown_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_skip_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_sound_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_soundcloud_20px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_soundcloud_20px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_soundcloud_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_soundcloud_25px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_soundcloud_25px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_soundcloud_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_soundcloud_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_soundcloud_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_spotify_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_spotify_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_spotify_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_spotify_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_spotify_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_system_report_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_thursday_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_thursday_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_tiles_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_time_machine_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_timer_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_trash_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_twitter_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_upload_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_upload_70px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_video_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_video_32px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_visual_studio_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_visual_studio_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_voice_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_wi-fi_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Wi-Fi_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_youtube_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_youtube_20px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_youtube_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_youtube_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_youtube_30px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_26.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_36.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_37.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_38.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_39.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_40.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_42.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_43.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_44.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_45.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_46.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_47.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_48.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_49.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1_.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImagineDragons_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagr_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram_PNG9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-gmail-png-gmail-icon-download-png-and-vector-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxresdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\month.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp1_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mp19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mqdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music_list2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music_player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music4_s_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NEAR LOGO V2.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\near_ai3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\near_ai9-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\near_start_bar-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office__.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_new_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_new_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OFFICIAL The Devil and The Huntsman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pc_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Photos-app-icon-256-colorful.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PJqSl-ra.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_b_s2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_m_s_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rag n Bone Man Human.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rag%27n%27Bone Man_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RagnBone Man_Wolves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ram_s_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RAP_A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remembrance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rewind_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roots swingin hammers_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound of war.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\space-abstract-4k-46.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spotify-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spotify-logo-png-open-2000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stack_Overflow-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_b_click_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_b_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop_s_w_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swarm_x_i_exist_in_my_dreams.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task_view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_speak_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the mountain museic image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Score_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tommee Profitt_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlike Pluto_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_image.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi_c_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi_connect_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi_offlin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Winter%27s Song.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5c289afb9a1575862e893a21_01. Royal Heath.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9a9c5d276af56c6a6947c480d1dcbb38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54_69_80_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Microsoft_Office_icon_%282019%29.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5847f9cbcef1014c0b5e48c8_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adele_A2.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adele-skyfall-lyric-video.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_d2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_l_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faouzia_A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblr_00f58b1a1f3cbe46daa05fccd72bffef_bfd6dce1_1280.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ok_hand_55px.png" />
+    <Content Include="youtube_horn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\C_UI_\C_UI_.vbproj">
+      <Project>{5d7a8bea-119a-4e7b-a934-30b47c1448f8}</Project>
+      <Name>C_UI_</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.84.4.1\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.84.4.1\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.84.4.1\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.84.4.1\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.84.4.10\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.84.4.10\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.84.4.10\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.84.4.10\build\CefSharp.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.84.4.10\build\CefSharp.WinForms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.84.4.10\build\CefSharp.WinForms.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.84.4.10\build\CefSharp.WinForms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.84.4.10\build\CefSharp.WinForms.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.84.4.10\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.84.4.10\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\CefSharp.WinForms.84.4.10\build\CefSharp.WinForms.targets" Condition="Exists('..\packages\CefSharp.WinForms.84.4.10\build\CefSharp.WinForms.targets')" />
+</Project>
